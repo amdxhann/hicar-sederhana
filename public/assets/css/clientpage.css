@@ -113,6 +113,7 @@ font-family: var(--ff-Poppins);
 position: absolute;
 margin-left: 400px;
 margin-top: 10px;
+list-style-type: none;
 }
 
 .footer-map { 
@@ -120,6 +121,7 @@ font-family: var(--ff-Poppins);
 position: absolute;
 margin-left: 850px;
 margin-top: 10px;
+list-style-type: none;
 }
 
 .footer-kantor { 
@@ -127,6 +129,7 @@ font-family: var(--ff-Poppins);
 position: absolute;
 margin-left: 600px;
 margin-top: 10px;
+list-style-type: none;
 }
 
 .footer-list:not(:last-of-type) { width: 50%; }

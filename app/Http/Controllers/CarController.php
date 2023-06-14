@@ -21,8 +21,9 @@ class CarController extends Controller
     }
     
     public function tambahmobil(Request $request) {
+        
 
-        $path = Storage::putFile('img/mobil', $request->file('uploadedimage'));
+        $path = Storage::putFile('img/cars', $request->file('uploadedimage'));
 
         $addcar = new Tbl_mobil;
         $addcar->nama=$request->car_name;
@@ -50,7 +51,7 @@ class CarController extends Controller
             );
         
         if(!is_null($request->file('uploadedimage'))) {
-            $path = Storage::putFile('img/mobil', $request->file('uploadedimage'));
+            $path = Storage::putFile('img/cars', $request->file('uploadedimage'));
         }
         $addcar = Tbl_mobil::find($request->id);
         $addcar->nama=$request->car_name;
