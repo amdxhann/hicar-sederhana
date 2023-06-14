@@ -117,7 +117,7 @@
                 
             <a href="/booking/{{ $item->id }}">
                 <div class="sub-menu">
-                    <img class="card-img-top" src="{{ asset('storage/'.$item->foto_mobil) }}" alt="Card image cap">
+                    <img class="card-img-top" src="{{ asset('assets/img/avanza.png') }}" alt="Card image cap">
                     <h5><b> {{ $item->nama }} </b></h5>
                     <h6> Tarif /hari : {{ $item->tarifhari }} </h6>
                 </div>

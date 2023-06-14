@@ -41,14 +41,6 @@ class BookingController extends Controller
         $pesanan->tbl_driver_id=$request->driverid;
         $pesanan->save();
         
-        $mobil = Tbl_mobil::find($request->idmobil);
-        $mobil->status = 'Tidak Tersedia';
-        $mobil->save();
-
-        $driver = Tbl_driver::find($request->idmobil);
-        $driver->status = 'Tidak Tersedia';
-        $driver->save();
-        
         return redirect('/bookingconfirm/'.$pesanan->id);
     }
 
@@ -56,6 +48,9 @@ class BookingController extends Controller
         return view('bookingconfirm', [
             'order' => Tbl_pesanan::find($id),
         ]);
+    }
+        
+    public function confirm($id){
         return view('returnconfirm', [
             'kembali' => Tbl_pesanan::find($id),
         ]);

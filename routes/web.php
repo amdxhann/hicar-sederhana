@@ -88,7 +88,7 @@ Route::get('/delete/{id}',[DriverController::class,'delete']);
 Route::get('/booking/{id}',[BookingController::class,'index']);
 Route::post('/booking',[BookingController::class,'booking']);
 Route::get('/bookingconfirm/{id}', [BookingController::class, 'invoice']);
-Route::get('/returnconfirm/{id}', [BookingController::class, 'invoice']);
+Route::get('/returnconfirm/{id}', [BookingController::class, 'confirm']);
 Route::get('/prereturncar', [BookingController::class, 'garasi']);
 Route::get('/return/{id}', [BookingController::class, 'return']);
 
